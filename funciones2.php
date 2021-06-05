@@ -27,8 +27,9 @@ function compararFechaAnuncio($fecha) {
  * @return true|false. 
  */
 function comprobarInformacionInicioSesionEnBaseDeDatos($login, $password) {
+    //insta/ncia del objeto de bd
     $conexionBD=new DB();
-
+    
     $resultado=$conexionBD->comprobarInformacionInicioSesionEnBaseDeDatos($login, $password);
     if($resultado==-2)
         mostrarMensaje("Error", "No se ha podido conectar con la base de datos." , "danger");        
